@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameCont : MonoBehaviour
 {
-    public GameObject hazard;
+    public GameObject[] hazards;
     public Vector3 spawnValues;
     public float startWait;
     public float spawnWait;
@@ -32,6 +32,7 @@ public class GameCont : MonoBehaviour
         spawnCounter += Time.deltaTime;
         if (spawnCounter >= spawnWait)
         {
+            GameObject hazard = hazards[Random.Range(0, hazards.Length)];
             Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
             Instantiate(hazard, spawnPosition, Quaternion.identity);
 
