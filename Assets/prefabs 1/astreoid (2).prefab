@@ -93,11 +93,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6cfa6305e5f62468be4320001e6a97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explotionEffect: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 3}
-  playerExplosionEffect: {fileID: 100008, guid: a93496017806b7740910df5fd946f306,
-    type: 3}
+  explosion: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 3}
+  playerExplosion: {fileID: 100008, guid: a93496017806b7740910df5fd946f306, type: 3}
   scoreValue: 10
-  GameCont: {fileID: 0}
 --- !u!82 &3851250914638716676
 AudioSource:
   m_ObjectHideFlags: 0

@@ -4,35 +4,50 @@ using UnityEngine;
 
 public class DestroyBycontact : MonoBehaviour
 {
-    public GameObject explotionEffect, playerExplosionEffect;
+    public GameObject explosion;
+    public GameObject playerExplosion;
     public int scoreValue;
-    public GameCont GameCont;
 
-    private void Start()
+    private GameCont gameController;
+
+    void Start()
     {
         GameObject gameControllerObject = GameObject.FindWithTag("GameController");
-        GameCont = gameControllerObject.GetComponent<GameCont>();
+        if (gameControllerObject != null)
+        {
+            gameController = gameControllerObject.GetComponent<GameCont>();
+        }
+        if (gameController == null)
+        {
+            Debug.Log("Cannot find 'GameController' script");
+        }
     }
 
-    private void OnTriggerEnter(Collider other)
-
+    void OnTriggerEnter(Collider other)
     {
-
-        if (other.CompareTag("boundry"))
+        if (gameObject.CompareTag("Enemy"))
         {
+            Debug.Log(other.name);
+
+        }
+        if (other.CompareTag("boundary") || other.CompareTag("Enemy"))
+        {
+
             return;
         }
 
-        Instantiate(explotionEffect, transform.position, Quaternion.identity);
-        GameCont.AddScore(scoreValue);
-
-        if (other.CompareTag("Player"))
+        if (explosion != null)
         {
-            Instantiate(playerExplosionEffect, transform.position, Quaternion.identity);
-            GameCont.GameOver();
-            Debug.Log("öldün");
+            Instantiate(explosion, transform.position, transform.rotation);
         }
 
+        if (other.tag == "Player")
+        {
+            Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
+            gameController.GameOver();
+        }
+
+        gameController.AddScore(scoreValue);
         Destroy(other.gameObject);
         Destroy(gameObject);
     }
