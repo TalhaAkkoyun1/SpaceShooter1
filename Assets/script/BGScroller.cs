@@ -13,7 +13,7 @@ public class BGScroller : MonoBehaviour
     {
         startPosition = transform.position;
 
-        Debug.Log("");
+        
 
     }
 

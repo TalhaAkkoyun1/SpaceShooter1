@@ -19,15 +19,15 @@ public class DestroyBycontact : MonoBehaviour
         }
         if (gameController == null)
         {
-            Debug.Log("Cannot find 'GameController' script");
         }
     }
 
     void OnTriggerEnter(Collider other)
     {
+        
         if (gameObject.CompareTag("Enemy"))
         {
-            Debug.Log(other.name);
+            Debug.Log("string"+other.name);
 
         }
         if (other.CompareTag("boundary") || other.CompareTag("Enemy"))

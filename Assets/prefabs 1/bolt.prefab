@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1452642029003424141}
   - component: {fileID: 5866946109163360404}
   - component: {fileID: -3990562860857938171}
+  - component: {fileID: 2910249487262557503}
   m_Layer: 0
   m_Name: bolt
   m_TagString: Untagged
@@ -77,7 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e94db10354a82048a04a47e2b3f01cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 15
 --- !u!114 &-3990562860857938171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,6 +94,18 @@ MonoBehaviour:
   explosion: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 3}
   playerExplosion: {fileID: 100008, guid: a93496017806b7740910df5fd946f306, type: 3}
   scoreValue: 0
+--- !u!114 &2910249487262557503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2293865841848357571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95a008f2296d42241a777ae667ce3162, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4828627887886952914
 GameObject:
   m_ObjectHideFlags: 0
