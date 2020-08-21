@@ -24,10 +24,10 @@ public class DestroyBycontact : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        
+        Debug.Log(other.name);
         if (gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("string"+other.name);
+            
 
         }
         if (other.CompareTag("boundary") || other.CompareTag("Enemy"))

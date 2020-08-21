@@ -19,7 +19,7 @@ public class EvasiveManeuver : MonoBehaviour
     private Rigidbody rb;
 
     void Start()
-    {
+    { 
         rb = GetComponent<Rigidbody>();
         currentSpeed = -5;
         //currentSpeed = rb.velocity.z;
